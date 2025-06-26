@@ -1,0 +1,87 @@
+start video from 26/03/2025
+
+
+PRACTICLE-1                                                 How to Configure Ansible?
+########################################################################################################################
+
+Step-1: Create 3 instances of t2.micro Amazon Linux VMs in AWS for better understanding change vm name like control node, node 1 node2. 
+a. 1 for - Control Node
+b. 2 for - Managed Nodes
+
+Note: Connect to all 3 VMs using MobaXterm
+
+Step-1: Do the following setup in all 3 machines
+a) Create user: 
+	sudo useradd ansible
+	sudo passwd ansible
+
+b) Configure user in sudoers file
+	sudo visudo
+	ansible ALL=(ALL) NOPASSWD: ALL
+
+c) Update sshd config file
+	sudo vi /etc/ssh/sshd_config
+
+-> change PasswordAuthentication "no" and  PermitEmptyPasswords "yes"
+
+d) Restart the server
+	sudo service sshd restart
+
+
+        Install Ansible in Control Node
+-------------------------------------------------------------------------
+
+Step-2: Install Ansible in Control Node
+a) Switch to Ansible user
+	sudo su ansible
+	cd ~
+b) Install Python because ansible is developed using python & to run ansible we require python software
+  	sudo yum install python3 -y
+
+c) cross Check python is installed?
+	python3 --version
+
+d) Install PIP (package manager) for downloading softwares and intalling it
+	sudo yum -y install python3-pip
+
+e) Install Ansible using Python PIP
+	pip3 install ansible --user
+
+f) Verify ansible version
+	ansible --version
+g) Create ansible folder under /etc
+	sudo mkdir /etc/ansible 
+
+
+
+			Generate SSH Key In your Control Node and Copy that SSH key into Managed Nodes
+-------------------------------------------------------------------------------------------------------------------------
+Step-3: Generate SSH Key In your Control Node and Copy that SSH key into Managed Nodes
+
+a) Switch to ansible user
+	sudo su ansible
+
+b) Generate ssh key using below command
+	ssh-keygen
+
+c) Copy it to Managed Nodes as ansible user
+	ssh-copy-id ansible@<ManagedNode-Private-IP-address>
+
+
+Note: Repeat above command by updating HOST IP for all the managed Servers.
+------------------------------------------------------------------------------------------
+Step-4: Update Host Inventory in Ansible Server to add managed node servers details
+
+	sudo vi /etc/ansible/hosts
+	[webservers]
+	192.31.0.247
+	[dbservers]
+	192.31.0.17
+------------------------------------------------------------------------------------------
+Step-5: Test Connectivity
+	ansible all -m ping
+
+
+
+
+

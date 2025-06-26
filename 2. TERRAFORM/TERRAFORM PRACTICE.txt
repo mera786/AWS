@@ -1,0 +1,79 @@
+
+
+
+
+TERRAFORM :
+##############################
+
+(1) download terraform : https://developer.hashicorp.com/terraform/install -> binary download -> create folder and extract here -> copy the path and set into enviroment variable
+(2) open cmd -> terraform -v
+(3) download vs code 
+(4) to open project in vs code -> open cmd in project path -> code . -> drag and drop project
+
+
+
+PRACTICLE-1                 PROVIDER
+---------------------------------------------------------------------
+
+(1) create one file in vs code named example.tf
+(2) go to aws create IAM for generating Access key and Secret access key
+(3) now open example.tf file and paste below code :
+
+ provider "aws" {
+	
+	region = "ap-south-1"
+	access_key = ""
+	secret_key = ""
+}
+
+(4) now go to terminal and run command like, terraform init for downloading AWS plugins
+
+
+
+PRACTICLE-2				RESOURCE
+-------------------------------------------------------------------------------
+
+(1) just after provider paste bellow code and modify as per need :
+
+resource "aws_instance" "vm_1" {
+	
+	ami = "ami-id"
+	instance_type = "t2.micro"
+	key_name = "devopssession"
+	security_groups = ["default"]
+	tags = {
+		Name = "LinuxVM"
+	}
+}
+
+
+(2) perform bellow commands:
+
+Terraform Commands
+_________________________
+
+(a) terraform init 
+
+(b) terraform validate 
+
+(c) terraform fmt
+
+(d) terraform plan -out=tplan / terraform plan
+
+(e)  terraform apply
+
+(f) terraform destroy
+
+
+
+PRACTICLE-3			Variables Creation	
+-------------------------------------------------------------------------------
+
+Note:- before creating create seperate folder like, dev, qa, prod lets assume in prod
+
+(1) in prod create a file named like input.tf in that keep all variable
+(2) use those variable in main.tf using "&{var.varName)"
+(3) now run commands to execute
+
+
+

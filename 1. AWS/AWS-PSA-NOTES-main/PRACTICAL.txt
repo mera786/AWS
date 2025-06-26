@@ -1,0 +1,729 @@
+              
+START WATCHING VIDEO 05/03/2025 after 00 minutes
+
+
+
+ FIRST PRACTICLE-1                     Creating Windows ec2 instance and connecting with it                                    
+########################################################################################################################
+########################################################################################################################
+
+KEY PAIRS
+----------------------------------
+(1) create key pairs named any like , devops_session
+
+
+SECURITY GROUP
+----------------------------------------
+(1) create security group named any like, security_group_1
+(2) choose type like , RDP for windows and port 3389
+
+
+EC2 INSTANCE FOR WINDOWS
+----------------------------------------------
+(1) create ec2 instance named like, windows_vm 
+(2) select windows machine from AMI
+(3) select existing key pair
+(4) select existing security group 
+(5) mention Number of instances like 1,2,3... click on lunch instance
+(6) now select your instance and connect where you will choose RDP client 
+(7) here you will find public DNS , username and password (after uploading key pairs)
+
+
+
+                                         Creating Windows ec2 instance and connecting with it                                    
+########################################################################################################################
+########################################################################################################################
+EC2 INSTANCE FOR LINUX
+----------------------------------
+(1) create ec2 instance named like, linux_vm
+(2) select linux machine from AMI
+(3) select existing key pair
+(4) select existing security group but edit inbound rule and add one more rule for ssh so that we can get port 22
+(5) now select your instance and connect where you will choose ssh client
+
+
+
+SECOND PRACTICLE-2                             How to allocate Elastic ip address
+###################################################################################################################
+###################################################################################################################
+(1) Under Network & Security find Elastic Ip click on
+(2) click on allocate Elastic ip address to ask for AWS then click on allocate
+(3) give any named like e_ip 
+(4) click on provided ip address (52.66.20.221)
+(5) click on Associate Elastick ip address
+(6) tick instance, select instance and prive ip address then click on associate
+
+
+
+THIRD PRACTICLE-3				practicle on EBS (Elastic Block Storage)
+#################################################################################################################
+#################################################################################################################
+(1) Create EC2 VM (like, VM-1)
+(2) choose Amazon Linux AMI
+
+(3) Create Additional EBS Volume (10 GB)
+Go to the EC2 Dashboard.
+Under Elastic Block Store, select Volumes and create a new volume with the following properties:
+Size: 10 GB
+Availability Zone: Ensure you select the same Availability Zone (AZ) as VM-1 (e.g., ap-south-1a).
+
+(4) Attach Additional Volume to EC2 VM-1
+After creating the additional EBS volume, right-click on it and select Attach.
+Choose the instance VM-1 and attach the volume to it (typically as /dev/xvdb).
+
+(5) Connect with VM-1 and Check Volumes Attached
+SSH into VM-1 using the key pair you created during the EC2 instance launch.
+Once logged in, check the attached volumes with the following command:  lsblk 
+
+(6) Store Data in Additional Volume by Mounting:
+   lsblk
+   sudo mkfs -t ext4 /dev/xvdb
+   mkdir psa
+   sudo mount /dev/xvdb psa
+Change into the psa directory and create files to store data:
+$ cd psa
+$ sudo touch f1.txt f2.txt
+
+(7) Detach Additional Volume from EC2 VM-1
+Go back to the EC2 Dashboard, select Volumes, find the additional volume (/dev/xvdb), and detach it from VM-1.
+
+(8) Create a New EC2 VM (VM-2)
+Launch a new EC2 instance (VM-2) with the same Amazon Linux AMI or any other OS.
+Ensure VM-2 is in the same AZ as VM-1 for volume attachment.
+
+(9) Attach Additional Volume to EC2 VM-2
+Attach the previously detached additional volume (from VM-1) to VM-2.
+It will show up as /dev/xvdb (or another name, depending on the device name you selected).
+
+(10) Check the Data on the Volume
+SSH into VM-2.
+
+Run the following command to check the attached volumes:
+$ lsblk
+
+Mount the additional volume (/dev/xvdb) to a new directory:
+ 
+$ mkdir demo
+$ sudo mount /dev/xvdb demo
+
+Now, check the files:
+$ ls -l demo
+
+You should see f1.txt and f2.txt in the demo directory, confirming the data was preserved even after detaching and reattaching the volume.
+
+
+FOUTH PRACTICLE-4				practicle on Snapshot in AWS
+#################################################################################################################
+#################################################################################################################
+
+(1) create an instance of AMI named like, vm_1
+(2) create one volume in same Availity zone, named like , addtional_volume
+(3) now attach volume to desired instance
+(4) now go to elastic block store and click on snapshots
+(5) now create snapshots either of volume or instance
+(6) now tick snapshot and select copy snapshot for a particular region 
+(7) now go in that region and check snapshot and from snapshot create volume
+
+Practicle ✅ Steps to Create a Lifecycle Policy (Using AWS Console)
+-------------------------------------------------------------------------
+🔹 Step 1: Go to Lifecycle Manager
+Open the EC2 Dashboard
+On the left menu, click "Lifecycle Manager"
+Click “Create lifecycle policy”
+
+🔹 Step 2: Choose Policy Type
+Choose “EBS Snapshot Policy”
+Click Next
+
+🔹 Step 3: Target Resources (Volumes)
+You select which EBS volumes to back up based on tags
+
+Example:
+Tag Key: Backup
+Tag Value: Daily
+
+Only volumes with this tag will be included in the backup.
+
+📌 So make sure your volumes are tagged properly.
+
+🔹 Step 4: Create Schedule
+Define how often you want the snapshots:
+
+
+Field	Example
+Frequency	Daily, Weekly, Monthly
+Start time	2:00 AM UTC
+Retention	Keep last 7 snapshots
+Copy tags	Optional (copies volume tags to snapshot)
+You can also enable Fast Snapshot Restore or Cross-Region Copy (for DR setups).
+
+🔹 Step 5: Tags for the Policy
+Give the policy itself a tag if needed (optional).
+
+🔹 Step 6: Review and Create
+Review all settings
+
+Click Create policy
+
+ 
+FIFTH PRACTICLE-5				🧪 Load Balancer Lab Task – Step-by-Step
+#################################################################################################################
+#################################################################################################################
+
+✅ Step-1: Create EC2 VM-1 with User Data:
+
+in advance details section. 
+
+#!/bin/bash
+sudo su
+yum install httpd -y
+cd /var/www/html
+echo "<html><h1>Pankaj Sir Academy - 1</h1></html>" > index.html
+service httpd start
+
+✅ Step-2: Create EC2 VM-2 with Similar User Data (but different content)
+ 
+#!/bin/bash
+sudo su
+yum install httpd -y
+cd /var/www/html
+echo "<html><h1>Pankaj Sir Academy - 1</h1></html>" > index.html
+service httpd start
+
+✅ Step-3: Create a Target Group and Add EC2s
+
+✅ Step-4: Create an Application Load Balancer (ALB)
+
+✅ Step-5: Access the Load Balancer DNS Name
+Once the ALB is active, hit url on browser
+http://<your-alb-dns-name>
+
+
+SIXTH PRACTICLE-6				Auto Scaling
+#################################################################################################################
+#################################################################################################################
+
+STEP-1
+           
+                      FLIGHT:=
+
+(1) create first instance named , flight_server_1 with user data
+
+#!/bin/bash
+sudo su
+yum install httpd -y
+cd /var/www/html
+echo "<html><h1>Flight App - 1</h1></html>" > index.html
+service httpd start
+
+(2) create second instance named , flight_server_2 with user data
+
+#!/bin/bash
+sudo su
+yum install httpd -y
+cd /var/www/html
+echo "<html><h1>Flight App - 2</h1></html>" > index.html
+service httpd start
+
+                        HOTEL:=
+
+(1) create first instance named , hotel_server_1 with user data
+
+#!/bin/bash
+sudo su
+yum install httpd -y
+cd /var/www/html
+echo "<html><h1>Hotel App - 1</h1></html>" > index.html
+service httpd start
+
+(2) create second instance named , hotel_server_2 with user data
+
+#!/bin/bash
+sudo su
+yum install httpd -y
+cd /var/www/html
+echo "<html><h1>Hotel App - 2</h1></html>" > index.html
+service httpd start
+
+STEP-2
+
+(1) create target group named, flightTargetGroup and add flight instances in it.
+(2) create another target group named, hotelTargetGroup and add hotel instances in it.
+(3) now create Application loadBalncer , select default action from flight or hotels want to execute first
+(4) for linking hotel in loadBalancer With Flights url: LoadBalancer -> Listeners & rules -> manage rules -> add rule
+(5) now go to load balancer and take DNS and hit on browser which will show default like flight then give query parameter or path parameter to see hotels
+
+STEP-3
+(1) got to Ec2 -> Auto Scalling -> Auto Scalling Group -> Create Auto Scalling Group 
+(2) now look to instance running you will find running instance.
+(3) now terminate the instance and due to auto scalling it will create another instance
+
+
+SEVENTH PRACTICLE-7			Relational Database Service (RDS)	
+#################################################################################################################
+#################################################################################################################
+
+(1) search for RDS -> create database :=( Standard Create -> engine type -> engine version -> select template -> DB instance identifier -> Master username -> 
+                                           master password -> DB instance class -> Storage type -> ...... etc ) -> Create database.
+(2) in security group edit inbound rule for mysql for port 3306
+(3) after created DB click on db name and find endpoint url
+(4) Now MySQL workbench connect with AWS endpoint url , open workbench click on plus icon and give url instead of localhost , then password and test connection.
+(5) to connect with java app instead of localhost in properties file paste endpoint url
+(6) delete database after practice.
+
+
+EIGHT PRACTICLE-8			S3 ( SIMPLE STORAGE SERVICE )	
+#################################################################################################################
+#################################################################################################################
+
+** Storing data (like files, images, videos, backups, documents, etc.) **
+
+(1) search for s3 and click on Create bucket
+(2) select bucket (folder) type -> bucket name -> select ownership like ACL disable / ACL enabled (if select ACL Enabled ) -> untick Block all public access -> create bucket
+(3) after created bucket click on bucket name -> upload -> add file (choose any file,image...etc ) -> permission -> grant public read access -> upload
+(4) click on file or folder name click on that -> find url -> hit on browser
+(5) delete the bucket
+
+
+** How to host static website **
+
+(1) on dekstop create a folder in that create two html page (index.html, error.html) using node pad
+(2) create bucket -> bucket name -> ACL enabled -> untick Block all public access ( tick i acknowledge) -> upload -> add files -> upload
+(3) once file is uploaded go to bucket -> properties -> find static website hosting click on edit -> enabled -> set root page and error page and click on save
+(4) after saved find url now hit url on browser to test
+
+
+** How to do versionning **
+
+(1) create bucket by enabling version and upload file
+(2) same file again upload 
+(3) go to bucket -> objects -> show versions
+(4) delete
+
+
+** exploring storage classes **
+(1) after uploading files go to properties -> expand it -> as per desired select storage class
+
+
+
+
+** Transfer Acceleration **
+(1) create bucket 
+(2) go to properties section find transfer acceleration option edit and enable and get on url 
+(3) takes that url and upload
+
+
+
+NINE PRACTICLE-9			MULTI-FACTOR AUTHENTICATION
+#################################################################################################################
+#################################################################################################################
+(1) go to profile -> Security credentials -> Multi-factor authentication (click on assign MFA device ) 
+(2) you will find 3 options like, passkey or security key , authenticator app and hardware totp token
+
+
+
+TENTH PRACTICLE-10			I AM A ROLE 	
+#################################################################################################################
+#################################################################################################################
+
+** Creating Sub Account **
+-------------------------------
+
+(1) go to search bar and type IAM , now go to dashboard
+(2) for creating sub account, now under Access management -> user -> create user := ( username,tick provide user access to AWS console, tick I want to create an IAM user,
+                                                                                      tick custom password) -> next 
+(3) Permissions options -> Attach policies directly -> next -> click on create user
+(4) now take account ID login into browser further provide username and password
+
+
+
+** Programmatic Access **
+------------------------------
+(1) go to IAM role -> while creating user don't tick 'provide user access' -> next -> create user 
+(2) once user got created , click on user -> create access key -> select CLI and tick i understand -> next -> create access key 
+(3) take your access key and secret access key 
+
+
+** User Groups **
+----------------------
+(1) Create a group.
+(2) Attach relevant policies.
+(3) Add users to the group.
+
+
+** Role **
+----------------------
+(1) under Access management -> role -> create role 
+(2) select Trusted entity type like AWS service , then use case like ec2 -> next
+(3) select Permissions policies like, AdministratorAccess -> next -> view and provide name and description -> create role
+
+
+
+** Policies **
+----------------------
+(1) under Access management -> policy -> create policy ->
+    Policy editor (select json , Choose a service (s3),Add resource (service like s3, resource type bucket , resource ARN like give bucket name 
+    and Add a condition ( condition key like aws:RequestedRegion,qualifier like for any value in request, operator like StringEquals ap-south-1))
+(2) give policy name and click on create
+(3) now attach this policy to any user
+
+
+** attach role to ec2 instance **
+--------------------------------------
+(1) create ec2 instance 
+(2) select ec2 -> action ( security-> modify IAM role-> choose -> update IAM role)
+
+
+
+ELEVENTH PRACTICLE-11			AWS CLI  	
+#################################################################################################################
+#################################################################################################################
+
+Note:- for CLI Commands search : aws cli commands documents
+
+a. Download the MSI installer: https://awscli.amazonaws.com/AWSCLIV2.msi
+b. Run the installer and follow the setup instructions.
+c. Verify installation: aws --version
+d. aws configure
+e. AWS Access Key ID [****************WZEZ]: 
+f. AWS Secret Access Key [****************GvFv]: 
+g. Default region name [ap-south-1]: ap-south-1
+h. Default output format [json]: json
+
+To Verify login run the following command
+
+i. aws sts get-caller-identity
+
+Response: In Json Format
+{
+    "UserId": "495599735532",
+    "Account": "495599735532",
+    "Arn": "arn:aws:iam::495599735532:root"
+}
+
+COMMANDS:
+
+S3: 
+
+(1) to create bucket:- aws s3 mb s3://<bucket-name>
+(2) to see list of bucket: aws s3 ls
+(3) to clear cmd : cls
+(4) to copy content to bucket: aws s3 cp test.txt s3://<file-name/(meraz101)> but exist in cmd root path, now open s3 go to bucket and varify
+(5) to remove file : aws s3 rm s3://<bucket-name/(meraz101)/<file-name/ (test.txt)>
+(6) to delete bucket : aws s3 rb s3://<bucket-name/(meraz101)
+
+EC2:
+
+(1) to create key pair and download: aws ec2 create-key-pair --key-name test1 > test1.pem
+(2) to create ec2 instance : aws ec2 run-instances --image-id ami-0af9569868786b23a --instance-type t2.micro --key-name test1
+(3) varify by opening aws console
+(4) to stop instance : aws ec2 stop-instances --instance-ids i-059f657ab04961884
+(5) to terminate instance : aws ec2 terminate-instances --instance-ids i-059f657ab04961884
+
+RDS:
+
+(1) to create database : aws rds create-db-instance --db-instance-identifier <db-name> --db-instance-class db.t3.micro --engine mysql --master-username admin --master-user-password MySecurePassword123 --allocated-storage 20 --no-publicly-accessible --availability-zone us-east-1a --db-name mydatabase --port 3306 
+(2) to delete database : aws rds delete-db-instance --db-instance-identifier my-mysql-db --skip-final-snapshot
+
+
+
+TWELFTH PRACTICLE-12			🧪 CloudWatch & SNS 	
+#################################################################################################################
+#################################################################################################################
+
+✅ Step 1: Create SNS Topic with Email Notification
+	a. Open AWS Console → Navigate to Amazon SNS.
+
+	b. Click Topics → Click Create topic.
+
+	c. Select Standard type.
+
+	d. Enter:
+
+		Topic name: pankaj
+
+	e. Click Create topic.
+
+✅ Step 2: Configure Email Subscription
+	a. After creating the topic, click on it → Click Create subscription.
+
+	b. Set:
+
+		Protocol: Email
+
+		Endpoint: (Enter your valid email address)
+
+	c. Click Create subscription.
+
+	d. Open your email inbox and confirm the subscription by clicking the link in the email.
+
+✅ Step 3: Launch and Configure EC2 with CloudWatch Alarm
+	a. Launch an EC2 instance (Amazon Linux 2 preferred).
+
+	b. Once running, go to:
+
+		EC2 Dashboard → Instances → Select your instance.
+
+	c. Click:
+
+		Actions → Monitor and troubleshoot → Manage CloudWatch alarms
+
+	
+	d. Under Metric, choose:
+
+		EC2 → Per-Instance Metrics → Select your instance → CPUUtilization
+
+	e. Set conditions:
+
+		Threshold type: Static
+
+		Whenever CPUUtilization is >= 5%
+
+	        5 minutes (or 1 minute if you want faster response)
+
+	f. Configure actions:
+
+		Alarm state trigger: In Alarm
+
+		Notification: Select your SNS topic (pankaj)
+
+		Name the alarm (e.g., HighCPUAlarm) → Click Create alarm
+
+✅ Step 4: SSH into EC2 and Simulate High CPU Load
+	a. Connect to EC2 using your SSH client:
+        b. Install stress tool: sudo yum install stress -y
+	c. Simulate CPU load (run this 3–4 times to trigger alarm): stress --cpu 8 -v --timeout 180s
+
+✅ Step 5: Monitor CloudWatch Alarm and SNS Email Notification
+	a. Navigate to CloudWatch Console → Alarms.
+
+	b. Click your alarm name.
+
+	c. Observe:
+
+	d. State changes: From OK → ALARM
+
+	e. Alarm History: Click on your alarm → Click on History tab to view how many times it was triggered.
+
+	f. Check your email inbox for notifications sent by SNS when alarm was triggered.
+
+
+
+
+THIRTEEN PRACTICLE-13		   ✅ Practicals: Deploy Spring Boot App on Elastic Beanstalk	
+#################################################################################################################
+#################################################################################################################
+
+🔹 Step 1: Create IAM Role for Beanstalk
+You need to create an IAM role that Elastic Beanstalk.
+
+🛠️ Steps:
+
+a. Go to IAM → Roles → Create Role
+b. Choose Elastic Beanstalk → Elastic Beanstalk
+c. Attach the following policies:
+
+	1. AWSElasticBeanstalkMulticontainerDocker
+
+	2. AWSElasticBeanstalkWebTier
+
+	3. AWSElasticBeanstalkWorkerTier
+
+d. Name the role:
+	psait_beanstack_role
+
+🔹 Step 2: Create Elastic Beanstalk Application
+🛠️ Steps:
+
+a. Go to AWS Console → Elastic Beanstalk
+b. Click on "Create Application"
+c. Enter:
+	1. Application Name (e.g., springboot-demo)
+	2. Platform: Java
+	3. Platform Branch: Choose appropriate version (e.g., Java 17 Corretto)
+	4. Do NOT upload code yet; you’ll do that in next steps.
+d. Click Create
+
+🔹 Step 3: Create Environment for the Application
+🛠️ Steps:
+
+a. After the application is created, click “Create Environment”
+b. Choose "Web server environment"
+c. Set the environment name (e.g., springboot-env)
+d. Choose the platform again (Java, version-specific)
+e. Select the IAM role: psait_beanstack_role
+f. Proceed with default settings and click Create Environment
+
+✅ Once the environment is created, you’ll receive a public DNS URL like:
+
+http://springboot-env.eba-xxxxxxx.us-east-1.elasticbeanstalk.com
+
+✅ Uploading Spring Boot .jar File
+g. You now deploy your code to the environment.
+
+🔹 Step 4: Prepare the JAR File
+Build your Spring Boot app using:
+
+mvn clean package
+Ensure target/myapp.jar is ready.
+
+🔹 Step 5: Upload and Deploy JAR
+🛠️ Steps:
+
+a. Go to Elastic Beanstalk → Your Environment
+b. Click "Upload and Deploy"
+c. Upload your .jar file
+d. Set version label (e.g., v1.0)
+e. Click Deploy
+
+🔹 Step 6: Set Environment Variable (PORT)
+To ensure the Spring Boot app listens on the correct port:
+
+🛠️ Steps:
+a. Go to Elastic Beanstalk → Your Environment → Configuration
+b. Find "Software → Edit"
+c. Under Environment Properties, add:
+d. SERVER_PORT = 5000
+e. Click Apply Changes
+
+✅ This will restart the environment with the correct port mapping.
+
+🔹 Step 7: Access Your App
+Once environment restarts successfully:
+
+📡 Open the environment URL
+Example:
+
+http://springboot-env.eba-xxxxxxx.us-east-1.elasticbeanstalk.com
+
+🎉 Your Spring Boot app is now live!
+
+
+FORTEEN PRACTICLE-14		   	 VPC
+#################################################################################################################
+#################################################################################################################
+
+ VPC
+-------
+
+(1) search for vpc -> your vpc -> create vpc
+   a. select vpc only 
+   b. give name like , custom_vpc1
+   c. select IPv4 CIDR manual input
+   d. give IPv4 CIDR like, 10.0.0.0/16
+   e. click on create vpc 
+
+
+SUBNET
+----------
+
+(1) go to subnet -> create subnet
+   a. Under VPC ID choose your vpc
+   b. Subnet name like, public_subnet
+   c. IPv4 subnet CIDR block like, 10.0.0.0/24
+   d. click on create subnet
+(2) create one more subnet by changing name like private_subnet and CIDR like, 10.0.1.0/24
+
+
+ROUTE TABLE
+-------------
+
+(1) now go to route table -> create route table
+    a. give name like, private_RT
+    b. select your VPC 
+    c. click on create route table
+(2) now attach public subnet to public RT and private subnet to private RT 
+   a. go to subnet and tick -> route table -> Edit route table association ( Route table ID select private RT and save )
+
+
+INTERNET GATEWAY
+------------------
+
+(1) go to Internet gateways -> Create internet gateway
+     a. Name tag like, ing
+     b. click on create internet gateway
+     c. go to internet gateway and select -> action -> attach vpc -> select vpc -> click on attach internet gateway
+     d. now go to route table -> select public RT -> route -> edit routes -> add route ( select Destination like, 0.0.0.0/0 and target like, your ing ) -> save and changes
+(2) now create ec2 instance but in network setting -> edit ( provide likes , VPC - required, Subnet,Auto-assign public IP like, enabled or disable) then click on lunch instance
+(3) now with ssh client try to test
+
+
+Note:- Peering connections
+-----------------------------
+Note:- seurity group protecting our resources like ec2 -> route table protecting our subnets  -> seurity group protecting our resources like ec2 -> vpc protecting our all subnets
+
+(1) create two vpc 
+(2) create peering connections -> create peering connection -> Peering connection settings: name like, my-pc-01, VPC ID (Requester) like choose cutom one, ...etc
+(3) click on create peering connection -> action -> accept request 
+(4) go to route table -> select defualt route -> route -> edit route -> provide like, 10.0.0.0/16 and choose peering connection  -> save and change
+(5) this time select cutom route -> route -> edit route -> provide like, 172.31.0.0/16 and choose peering -> save and change
+(6) now create two ec2 instance by setting vpc setting and one try to connect with ssh and another from ssh try to ping by taking another private ip
+(7) now modify the security group and add rule like all trafic and ip of another ec2 service
+
+Quez: what is the difference between security group and NACL 
+
+
+
+FIFTEEN PRACTICLE-15		   	 EFS
+#################################################################################################################
+#################################################################################################################
+
+QUEZ: difference between s3 and Efs?
+QUEZ: Nfs in AWS?
+
+(1) search for EFS -> create file system (give name, vpc ) -> click on create file system -> click on created EFS like psa
+(2) in security group add rule like NFS and port 2049
+(2) go to network again go to created EFS and click on manage then remove all default security group and choose your own
+(3) now create two ec2 instance make sure using same security group where you have enabled NFS
+(4) now on ec2 instance install NFS/practice for that use below commands:
+
+for connecting with first VM-1
+a. sudo yum install -y amazon-efs-utils :- to install NFS
+b. mkdir efsdir :- create a folder 
+c. cd efsdir
+d. sudo touch a.txt b.txt c.txt
+e. cd ~
+f. sudo mount -t efs -o tls <EFS-file id>:/ efsdir : for mounting
+
+for connecting with second VM-2
+g. with ssh connect
+h. sudo yum install -y amazon-efs-utils
+h. create a folder like mkdir dir
+i. sudo mount -t efsdir -o tls <EFS-id>: / dir
+j. now open two ssh and try to make file in vm-1 and see in vm-2
+
+
+
+       
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
