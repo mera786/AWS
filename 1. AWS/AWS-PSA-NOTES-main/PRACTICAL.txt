@@ -56,12 +56,21 @@ EC2 INSTANCE FOR LINUX
 SECOND PRACTICLE-2                             How to allocate Elastic ip address
 ###################################################################################################################
 ###################################################################################################################
+Note: first need any ec2 instance for it. 
 (1) Under Network & Security find Elastic Ip click on
 (2) click on allocate Elastic ip address to ask for AWS then click on allocate
 (3) give any named like e_ip 
 (4) click on provided ip address (52.66.20.221)
 (5) click on Associate Elastick ip address
-(6) tick instance, select instance and prive ip address then click on associate
+(6) tick instance, select instance and private ip address then click on associate
+(7) now check public ip address, and then stop and start ec2_vm and again check public ip address. or using ssh again connect vm
+(8)  De-Associate Elastic IP :
+      Go to Elastic IPs → Select the IP → Actions → Disassociate
+(9) Release Elastic IP (to avoid billing) :
+    After disassociating, go to Elastic IPs ,
+    Select the IP → Actions → Release Elastic IP
+
+Note:- This frees the IP and prevents unnecessary charges
 
 
 
