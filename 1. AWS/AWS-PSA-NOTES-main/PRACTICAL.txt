@@ -30,7 +30,7 @@ EC2 INSTANCE FOR WINDOWS
 
 
 
-                                         Creating Windows ec2 instance and connecting with it                                    
+                                         Creating Linux ec2 instance and connecting with it                                    
 ########################################################################################################################
 ########################################################################################################################
 EC2 INSTANCE FOR LINUX
