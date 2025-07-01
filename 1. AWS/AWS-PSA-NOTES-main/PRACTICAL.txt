@@ -10,6 +10,7 @@ START WATCHING VIDEO 05/03/2025 after 00 minutes
 KEY PAIRS
 ----------------------------------
 (1) create key pairs named any like , devops_session
+(2) select RSA, .pem
 
 
 SECURITY GROUP
