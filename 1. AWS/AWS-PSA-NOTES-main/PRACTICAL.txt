@@ -7,13 +7,13 @@ START WATCHING VIDEO 05/03/2025 after 00 minutes
 ########################################################################################################################
 ########################################################################################################################
 
-KEY PAIRS
+KEY PAIRS ( FREE )
 ----------------------------------
 (1) create key pairs named any like , devops_session
 (2) select RSA, .pem
 
 
-SECURITY GROUP
+SECURITY GROUP ( FREE )
 ----------------------------------------
 (1) create security group named any like, security_group_1
 (2) edit inbound rule (choose type like , RDP for windows and port 3389)
@@ -53,7 +53,7 @@ EC2 INSTANCE FOR LINUX
 
 
 
-SECOND PRACTICLE-2                             How to allocate Elastic ip address
+SECOND PRACTICLE-2                             How to allocate Elastic ip address ( BILLING )
 ###################################################################################################################
 ###################################################################################################################
 Note: first need any ec2 instance for it. 
@@ -74,9 +74,10 @@ Note:- This frees the IP and prevents unnecessary charges
 
 
 
-THIRD PRACTICLE-3				practicle on EBS (Elastic Block Storage)
+THIRD PRACTICLE-3				EBS (Elastic Block Storage)
 #################################################################################################################
 #################################################################################################################
+                                                practicle on volume.
 (1) Create EC2 VM (like, VM-1)
 (2) choose Amazon Linux AMI
 
