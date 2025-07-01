@@ -1,4 +1,4 @@
-🔧 What is DevOps?
+(1) 🔧 What is DevOps?
 ##########################################
 DevOps is a combination of two words:
 
@@ -11,7 +11,7 @@ Ops = Operations (managing infrastructure, deployment, and monitoring)
 Bridge the gap between development and operations teams, so software can be built, tested, and released faster, more reliably, and continuously.
 
 
-🎯 Main Goals of DevOps
+(2) 🎯 Main Goals of DevOps
 #####################################
 Faster delivery of software
 
@@ -25,7 +25,7 @@ Higher software quality with fewer bugs
 
 Rapid recovery from failures
 
-⚙️ Key DevOps Practices
+(3) ⚙️ Key DevOps Practices
 #########################
 Practice	                                  Description
 🔄 CI/CD  	                       Automate code integration, testing, and deployment
@@ -36,7 +36,7 @@ Practice	                                  Description
 
 
 #####################################
-🏢 What is IT Infrastructure?
+(4) 🏢 What is IT Infrastructure?
 #####################################
 
 IT Infrastructure refers to the basic physical and virtual resources required to run and manage IT services and software applications.
@@ -46,7 +46,7 @@ IT Infrastructure refers to the basic physical and virtual resources required to
 It's everything you need to host, run, connect, store, protect, and manage your software and data.
 ---------------------------------------------------------------------------------------------------
 
-💻 Components of IT Infrastructure
+(5) 💻 Components of IT Infrastructure
 ################################################
 
 When you're setting up a software company (or any IT service), you need several core resources:
@@ -86,7 +86,7 @@ All these components together make up the IT Infrastructure – the foundation n
 ---------------------------------------------------------------------------------------------------------
 
 
-🏢 What is On-Prem Infrastructure?
+(6) 🏢 What is On-Prem Infrastructure?
 #################################################
 On-Premises (On-Prem) infrastructure means:
 -> You buy, own, and manage all your IT resources physically at your location (like office or data center).
@@ -100,7 +100,7 @@ c. Hiring IT staff for maintenance
 
 d. Handling security, repairs, and upgrades
 
-⚠️ Challenges with On-Prem Infrastructure
+(7) ⚠️ Challenges with On-Prem Infrastructure
 ################################################
 💰 High Initial Investment – You have to buy everything upfront (costly!)
 
@@ -116,7 +116,7 @@ d. Handling security, repairs, and upgrades
 ---------------------------------------------------------------------------
 
 
-☁️ What is Cloud Computing?
+(8) ☁️ What is Cloud Computing?
 ################################
 Cloud computing is the delivery of IT resources like servers, storage, databases, and software over the internet, on a pay-as-you-go basis.
 
@@ -136,7 +136,7 @@ Benefit	Description
 
 Cloud Providers are companies that offer cloud computing services. They manage the infrastructure and offer you services through the internet.
 
-Top Providers:
+(9) Top Providers:
 -------------------
 Provider	Company
 ☁️ AWS	     	 Amazon Web Services (Most popular)
@@ -146,7 +146,7 @@ Provider	Company
 ☁️ Alibaba Cloud	 Popular in Asia
 ☁️ DigitalOcean	 Developer-friendly, small-scale cloud
 
-🧠 Summary
+(10) 🧠 Summary
 -------------------
 On-Prem Infrastructure 		Cloud Computing
 
@@ -161,7 +161,7 @@ Manual backups			Automated backups
 -------------------------------------------------------------------------------------------------------------
 
 
-☁️ Cloud Service Models
+(11) ☁️ Cloud Service Models
 Cloud providers offer different levels of services depending on how much control and responsibility you want. These models are:
 
 IaaS – Infrastructure as a Service
@@ -171,7 +171,7 @@ PaaS – Platform as a Service
 SaaS – Software as a Service
 
 
-🧱 What is IaaS (Infrastructure as a Service)?
+(12) 🧱 What is IaaS (Infrastructure as a Service)?
 ####################################################
 -> IaaS is a cloud service model where the cloud provider gives you raw infrastructure, and you build everything on top of it.
 
@@ -226,7 +226,7 @@ DigitalOcean		Droplets
 
 ------------------------------------------------------------------------------------------------
 
-⚙️ What is PaaS (Platform as a Service)?
+(13) ⚙️ What is PaaS (Platform as a Service)?
 #############################################
 PaaS is a cloud service model where the cloud provider gives you a ready-made platform (runtime, OS, web server, etc.) so that you can directly deploy and run your application — without worrying about setting up servers or infrastructure.
 
@@ -290,7 +290,7 @@ Microsoft Azure App Service	Deploy and scale web apps easily
 
 -----------------------------------------------------------------------------------------------------
 
-💻 What is SaaS (Software as a Service)?
+(14) 💻 What is SaaS (Software as a Service)?
 ####################################################
 SaaS is a cloud service model where the cloud provider gives you ready-to-use software, and you can access it through the internet — no installation, no setup, no servers.
 
@@ -330,7 +330,7 @@ Salesforce			Customer relationship management (CRM)
 ------------------------------------------------------------------------------------------
 
 
-☁️ What is AWS Cloud?
+(15) ☁️ What is AWS Cloud?
 ##############################
 AWS stands for Amazon Web Services – it’s the world's most popular cloud provider, offering a wide range of cloud computing services to individuals, startups, enterprises, and governments.
 
@@ -346,7 +346,7 @@ AWS stands for Amazon Web Services – it’s the world's most popular cloud pro
 🌐 AWS Global Infrastructure
 To deliver fast, reliable, and secure services, AWS has a global infrastructure. Here's how it's structured:
 
-✅ Region
+(16) ✅ Region
 ---------------------------------------------------------------------
 A Region is a geographic area (e.g., US-East, Asia-Pacific, Europe)
 
@@ -369,7 +369,7 @@ Designed for high availability & fault tolerance
 🟢 Currently: 105 Availability Zones
 ------------------------------------------------------------------------------
 
-🔧 Why This Global Setup Matters
+(17) 🔧 Why This Global Setup Matters
 --------------------------------------------------
 Feature				Benefit
 
@@ -379,7 +379,7 @@ Feature				Benefit
 🔒 Secure		Isolated zones = better security & control
 --------------------------------------------------------------------------------------
 
-☁️ AWS Services Overview
+(18) ☁️ AWS Services Overview
 ##########################################
 AWS offers 200+ services, here are some of the most popular and important ones, grouped by purpose:
 
@@ -417,7 +417,7 @@ SNS (Simple Notification Service)		Send email, SMS, push notifications automatic
 
 ----------------------------------------------------------------------------------------------------------------------
 
-☁️ Elastic Compute Cloud (EC2) - AWS Service
+(19) ☁️ Elastic Compute Cloud (EC2) - AWS Service
 ##############################################################
 EC2 is one of the most demanded services in AWS. It allows you to create virtual machines (VMs) in the AWS cloud, which are called EC2 instances.
 
@@ -485,9 +485,11 @@ Security Groups act like firewalls to define which incoming and outgoing traffic
 
 One Security Group can be assigned to multiple EC2 instances.
 
+-------------------------------|
+ FIRST PRACTICLE-1             |
 -------------------------------------------------------------------------
-Creating Windows ec2 instance and connecting with it
-###########################################################################                      ######### START PRACTICAL FROM HERE ####################
+(20) Creating Windows ec2 instance and connecting with it
+############################################################################   START PRACTICAL FROM HERE   ####################
 1) Create Key Pair (.pem file)
 A Key Pair is used for secure login into your EC2 instance.
 
@@ -539,7 +541,7 @@ Open the .rdp file → Enter the username (usually Administrator) and decrypted 
 
 Accept the certificate warning → You’ll be logged into your Windows EC2 instance.
 
-Types of IPs in AWS Cloud
+(21) Types of IPs in AWS Cloud
 ===============================
 ✅ We have 3 types of IPs in AWS:
 1) Private IP
@@ -575,7 +577,7 @@ Charged if not associated with a running instance
 Elastic IP : 3.6.99.192
 
 ###############################
-Practicals on Elastic IP
+(22) Practicals on Elastic IP
 ##############################
 Step-1: Allocate Elastic IP
 Go to EC2 Console > Network & Security > Elastic IPs
@@ -608,7 +610,7 @@ Select the IP → Actions → Release Elastic IP
 
 This frees the IP and prevents unnecessary charges
 #######################################################################
-✅ What is EBS?
+(23) ✅ What is EBS?
 EBS stands for Elastic Block Store.
 
 Think of it like a hard disk or SSD that you attach to your EC2 (Elastic Compute Cloud) instance.
@@ -714,9 +716,9 @@ Archival (only if legacy reasons force it)
 
 ⚠️ Slow performance, not recommended for modern EC2 setups.
 
-#################
-Practicals on EBS
-######################
+##################################
+(24) Practicals on Volume of EBS
+##################################
 1) Create EC2 VM (VM-1)
 OS: Amazon Linux AMI.
 
@@ -791,7 +793,7 @@ You have successfully:
 -> Verified that the data persisted.
 
 ####################################
-📸 What is a Snapshot in AWS?
+(25) 📸 What is a Snapshot in AWS?
 ####################################
 
 A Snapshot is a backup of an EBS volume.
@@ -843,7 +845,7 @@ A snapshot is just a stored image of a disk. You can't run it or mount it direct
 -> Moving data across regions (by copying snapshots)
 -> Creating AMIs (Amazon Machine Images)
 
-✅ Q) How to copy data from 1a zone VM to 1b zone VM?
+(26) ✅ Q) How to copy data from 1a zone VM to 1b zone VM?
 ########################################################
 ▶️ Step-by-Step Explanation:
 🧱 Step 1: Create a snapshot of the volume attached to 1a VM
@@ -855,7 +857,7 @@ Now use that snapshot to create a new EBS volume, but place it in the 1b zone.
 🧱 Step 3: Attach the new 1b volume to your 1b VM
 Now that the volume exists in 1b, attach it to the EC2 instance in that zone.
 
-🔄 What is Lifecycle Manager?
+(27) 🔄 What is Lifecycle Manager?
 ############################################
 Lifecycle Manager helps you:
 
@@ -865,7 +867,7 @@ Lifecycle Manager helps you:
 
 It’s useful for data protection, disaster recovery, and backup compliance.
 
-✅ Steps to Create a Lifecycle Policy (Using AWS Console)
+(28) ✅ Steps to Create a Lifecycle Policy (Using AWS Console)
 🔹 Step 1: Go to Lifecycle Manager
 Open the EC2 Dashboard
 On the left menu, click "Lifecycle Manager"
@@ -917,7 +919,7 @@ Retain the last 5 backups
 Delete older ones automatically
 You just set that up once, and AWS handles it every day. Zero manual work.
 
-✅ 1) What is User Data in EC2?
+(29) ✅ 1) What is User Data in EC2?
 #########################################
 💡 Definition:
 User data is a startup script (bash, cloud-init, etc.) you provide when launching an EC2 instance. It runs automatically once when the instance boots for the first time.
@@ -951,7 +953,7 @@ Go to the Security Group → Inbound Rules
 Allow traffic on port 80 (HTTP) from Anywhere (0.0.0.0/0)
 Open browser and type: http://<your-ec2-public-ip>
 
-🔄 What is a Load Balancer?
+(30) 🔄 What is a Load Balancer?
 #################################
 A Load Balancer is a system that automatically distributes incoming network or application traffic across multiple servers (or instances) to ensure no single server is overloaded with user request.
 
@@ -986,7 +988,7 @@ No.	Benefit	Explanation
 4️⃣	Faster performance	 - Better response time for users
 5️⃣	High availability	 - If one server fails, others still serve users
 
-🧪 Load Balancer Lab Task – Step-by-Step Explanation
+(31) 🧪 Load Balancer Lab Task – Step-by-Step Explanation
 #########################################################
 ✅ Step-1: Create EC2 VM-1 with User Data
 This instance will act as Server-1 running a simple static webpage.
