@@ -16,7 +16,7 @@ KEY PAIRS
 SECURITY GROUP
 ----------------------------------------
 (1) create security group named any like, security_group_1
-(2) choose type like , RDP for windows and port 3389
+(2) edit inbound rule (choose type like , RDP for windows and port 3389)
 
 
 EC2 INSTANCE FOR WINDOWS
