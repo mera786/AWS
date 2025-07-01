@@ -27,11 +27,27 @@
 (17) 🔧 Why This (region & AZ)  Global Setup Matters?
 (18) can you just Overview of ☁️ AWS Services ?
 (19) can you now explain ☁️ Elastic Compute Cloud (EC2) - AWS Service in depth?
-(20) how many Types of IPs in AWS Cloud , explain each one?
-(21) ✅ What is EBS? 
+        ✅ Key Points about EC2:
+         - What is an EC2 Instance?
+         - How Billing happens?
+         - How Storage work ?
+         - How Networking work?
+         - How EC2 Instances Created?
+         - Security work?
+(20) Steps to Create Windows ec2 instance and connecting with it?     [ PRACTICAL ]
+
+
+(21) how many Types of IPs in AWS Cloud , explain each one?
+(22) Steps How to allocate Elastic ip address ?           [ PRACTICAL ]
+(23) ✅ What is EBS? 
       (a) ✅ How does EBS work with EC2?
       (b) ✅ Types of EBS Volumes? and explain each one?
-(22) 📸 What is a Snapshot in AWS?
-(23) ✅ Q) How to copy data from 1a zone VM to 1b zone VM?
-          (a) 🔄 What is Lifecycle Manager?
+(24) Steps to create Volume and attach it (EBS) ?              [ PRACTICAL ]
+(25) 📸 What is a Snapshot in AWS?
+(26) ✅ Q) Tell steps How to copy data from 1a zone VM to 1b zone VM?      [ PRACTICAL - 4 ]
+(27) 🔄 What is Lifecycle Manager?
+(28) ✅ Steps to Create a Lifecycle Policy (Using AWS Console)?       [ PRACTICAL - 4 ]
+(29) ✅ What is User Data in EC2?
+(30) 🔄 What is a Load Balancer & Benefits of Load Balancer?
+(31) 
 
