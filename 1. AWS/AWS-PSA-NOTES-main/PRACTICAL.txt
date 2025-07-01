@@ -27,7 +27,16 @@ EC2 INSTANCE FOR WINDOWS
 (4) select existing security group 
 (5) mention Number of instances like 1,2,3... click on lunch instance
 (6) now select your instance and connect where you will choose RDP client 
-(7) here you will find public DNS , username and password (after uploading key pairs)
+(7) click on getpassowrd -> upload .pem file now get password -> click on decrypt password 
+(8) here you will find public DNS , username and password.
+(9) Open MobaXterm:
+- Click on Session (top-left)
+- Select RDP (NOT SSH!)
+ Fill in:
+  - Remote Host: Your EC2 Public DNS (e.g., ec2-13-233-xxx.ap-south-1.compute.amazonaws.com)
+  - username and enter: Administrator
+  - click ok
+  - now give the password and click ok , here your windows screen will be visible.
 
 
 
