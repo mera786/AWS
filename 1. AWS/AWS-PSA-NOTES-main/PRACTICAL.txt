@@ -1,22 +1,124 @@
               
 START WATCHING VIDEO 05/03/2025 after 00 minutes
 
+                                                  *********************************************
+                                                  **PRACTICAL OF EC2 ONE OF THE AWS SERVICES **
+                                                  *********************************************
+ec2 service of AWS:
+┃
+▼
+Instances component-1 :
+┃
+▼
+Under Instances features :
+┃
+▼
+a. Instances
+b. Instance Types
+etc ...
+--------------------------------------------------------------
+Images  component-2 :
+┃
+▼
+Under Images features :
+┃
+▼
+a. AMIs
+b. AMI Catalog
+----------------------------------------------------------------
+Elastic Block Store component-3 :
+┃
+▼
+Under Elastic Block Store features :
+┃
+▼
+a. Volumes
+b. Snapshots
+c. Lifecycle Manager
+-----------------------------------------------------------------
+Network & Security  component-4 :
+┃
+▼
+Under Network & Security features:
+┃
+▼
+a. Security Groups
+b. Elastic IPs
+c. Key Pairs
+etc ....
+------------------------------------------------------------------
+Load Balancing component-5 :
+┃
+▼
+Under Balancing fetures :
+┃
+▼
+a. Load Balancers
+etc ...
+-------------------------------------------------------------------
+Auto Scaling  component-6 :
+┃
+▼
+Under Scaling features :
+┃
+▼
+a. Auto Scaling Groups
+-------------------------------------------------------------------
 
 
- FIRST PRACTICLE-1                     Creating Windows ec2 instance and connecting with it                                    
-########################################################################################################################
-########################################################################################################################
+###################################################################################################################################################
+                                         EC2 SERVICE OF AWS - 01
+###################################################################################################################################################
+
+
+                                  Network & Security Component                                  
+-------------------------------------------------------------------------------------------------------------------------------------------------
+                                        FIRST PRACTICLE-1 :> On Key Pairs feature
+                                      ##############################################
 
 KEY PAIRS ( FREE )
 ----------------------------------
 (1) create key pairs named any like , devops_session
 (2) select RSA, .pem
 
+                                        SECOND PRACTICLE-2 :> On Security Groups feature
+                                      #####################################################
 
 SECURITY GROUP ( FREE )
 ----------------------------------------
 (1) create security group named any like, security_group_1
 (2) edit inbound rule (choose type like , RDP for windows and port 3389)
+
+
+                                        THIRD PRACTICLE-3 :> On Elastic IPs, How to allocate Elastic ip address ( BILLING )
+                                      ###########################################################################################
+
+ELASTIC IPS (BILLING) 
+-------------------------
+(1) Under Network & Security find Elastic Ip click on
+(2) click on allocate Elastic ip address to ask for AWS then click on allocate
+(3) give any named like e_ip 
+(4) click on provided ip address (52.66.20.221)
+(5) click on Associate Elastick ip address
+(6) tick instance, select instance and private ip address then click on associate
+(7) now check public ip address, and then stop and start ec2_vm and again check public ip address. or using ssh again connect vm
+(8)  De-Associate Elastic IP :
+      Go to Elastic IPs → Select the IP → Actions → Disassociate
+(9) Release Elastic IP (to avoid billing) :
+    After disassociating, go to Elastic IPs ,
+    Select the IP → Actions → Release Elastic IP
+
+Note:- This frees the IP and prevents unnecessary charges
+
+
+
+
+
+                                  Together: Instances & images Component                                  
+---------------------------------------------------------------------------------------------------------------------------------------------------
+                                                   
+                                          FIRST PRACTICLE-1 :> Creating windows ec2 instance and connecting with it:
+                                          ############################################################################
 
 
 EC2 INSTANCE FOR WINDOWS
@@ -40,9 +142,9 @@ EC2 INSTANCE FOR WINDOWS
 
 
 
-                                         Creating Linux ec2 instance and connecting with it                                    
-########################################################################################################################
-########################################################################################################################
+                                          SECOND PRACTICLE-2 :> Creating Linux ec2 instance and connecting with it: 
+                                          ##########################################################################
+
 EC2 INSTANCE FOR LINUX
 ----------------------------------
 (1) create ec2 instance named like, linux_vm
@@ -53,39 +155,32 @@ EC2 INSTANCE FOR LINUX
 
 
 
-SECOND PRACTICLE-2                             How to allocate Elastic ip address ( BILLING )
-###################################################################################################################
-###################################################################################################################
-Note: first need any ec2 instance for it. 
-(1) Under Network & Security find Elastic Ip click on
-(2) click on allocate Elastic ip address to ask for AWS then click on allocate
-(3) give any named like e_ip 
-(4) click on provided ip address (52.66.20.221)
-(5) click on Associate Elastick ip address
-(6) tick instance, select instance and private ip address then click on associate
-(7) now check public ip address, and then stop and start ec2_vm and again check public ip address. or using ssh again connect vm
-(8)  De-Associate Elastic IP :
-      Go to Elastic IPs → Select the IP → Actions → Disassociate
-(9) Release Elastic IP (to avoid billing) :
-    After disassociating, go to Elastic IPs ,
-    Select the IP → Actions → Release Elastic IP
-
-Note:- This frees the IP and prevents unnecessary charges
 
 
 
-THIRD PRACTICLE-3				EBS (Elastic Block Storage)
-#################################################################################################################
-#################################################################################################################
-                                                practicle on volume.
+				
+                                  EBS (Elastic Block Storage) Component                                  
+---------------------------------------------------------------------------------------------------------------------------------------------------
+                                          FIRST PRACTICLE-1 :> On Volume feature
+                                          #######################################
+
+Note : Volumes :> Charged based on the size (GB) and type (e.g., gp3, io2, st1, etc.).
+
 (1) Create EC2 VM (like, VM-1)
 (2) choose Amazon Linux AMI
 
 (3) Create Additional EBS Volume (10 GB)
 Go to the EC2 Dashboard.
 Under Elastic Block Store, select Volumes and create a new volume with the following properties:
-Size: 10 GB
-Availability Zone: Ensure you select the same Availability Zone (AZ) as VM-1 (e.g., ap-south-1a).
+Volume type : 	General Purpose SSD (gp3),
+Size (GiB) : 10 GiB,
+IOPS : Keep default 3000,
+Throughput (MiB/s) : Keep default 125,
+Availability Zone:  Ensure you select the same Availability Zone (AZ) as VM-1 (e.g., ap-south-1a),
+Snapshot ID : Leave blank,
+Encryption : ✅ Optional – You can enable or skip,
+Tags :  ✅ Optional – Not needed for testing.
+
 
 (4) Attach Additional Volume to EC2 VM-1
 After creating the additional EBS volume, right-click on it and select Attach.
@@ -105,7 +200,7 @@ $ cd psa
 $ sudo touch f1.txt f2.txt
 
 (7) Detach Additional Volume from EC2 VM-1
-Go back to the EC2 Dashboard, select Volumes, find the additional volume (/dev/xvdb), and detach it from VM-1.
+Go back to the EC2 Dashboard, select Volumes, find the additional volume (/dev/xvdb) / your created volume, and detach it from VM-1.
 
 (8) Create a New EC2 VM (VM-2)
 Launch a new EC2 instance (VM-2) with the same Amazon Linux AMI or any other OS.
@@ -116,7 +211,7 @@ Attach the previously detached additional volume (from VM-1) to VM-2.
 It will show up as /dev/xvdb (or another name, depending on the device name you selected).
 
 (10) Check the Data on the Volume
-SSH into VM-2.
+use SSH into VM-2. to connect 
 
 Run the following command to check the attached volumes:
 $ lsblk
@@ -132,9 +227,12 @@ $ ls -l demo
 You should see f1.txt and f2.txt in the demo directory, confirming the data was preserved even after detaching and reattaching the volume.
 
 
-FOUTH PRACTICLE-4				practicle on Snapshot in AWS
-#################################################################################################################
-#################################################################################################################
+				
+                                          SECOND PRACTICLE-2 :> Snapshot
+                                          ###############################
+
+Note : Snapshots :> You are not charged for creating the snapshot, but you are charged for storing it in Amazon S3
+
 
 (1) create an instance of AMI named like, vm_1
 (2) create one volume in same Availity zone, named like , addtional_volume
@@ -143,6 +241,12 @@ FOUTH PRACTICLE-4				practicle on Snapshot in AWS
 (5) now create snapshots either of volume or instance
 (6) now tick snapshot and select copy snapshot for a particular region 
 (7) now go in that region and check snapshot and from snapshot create volume
+
+
+                                          THIRD PRACTICLE-3 :> Lifecycle Manager
+                                          #######################################
+
+Note: Lifecycle Manager :>  Lifecycle Manager free but Snapshots created by it charged.
 
 Practicle ✅ Steps to Create a Lifecycle Policy (Using AWS Console)
 -------------------------------------------------------------------------
@@ -186,9 +290,9 @@ Review all settings
 Click Create policy
 
  
-FIFTH PRACTICLE-5				🧪 Load Balancer Lab Task – Step-by-Step
-#################################################################################################################
-#################################################################################################################
+				
+                                  Load Balancing Component                                  
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
 ✅ Step-1: Create EC2 VM-1 with User Data:
 
@@ -279,9 +383,10 @@ STEP-3
 (3) now terminate the instance and due to auto scalling it will create another instance
 
 
-SEVENTH PRACTICLE-7			Relational Database Service (RDS)	
-#################################################################################################################
-#################################################################################################################
+				
+##################################################################################################################################################
+                                   Relational Database Service (RDS) Of AWS
+##################################################################################################################################################
 
 (1) search for RDS -> create database :=( Standard Create -> engine type -> engine version -> select template -> DB instance identifier -> Master username -> 
                                            master password -> DB instance class -> Storage type -> ...... etc ) -> Create database.
