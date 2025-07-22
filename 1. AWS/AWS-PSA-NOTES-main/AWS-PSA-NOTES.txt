@@ -17,7 +17,7 @@ Faster delivery of software
 
 Automation of processes (build, test, deploy)
 
-Improved collaboration between teams
+Better collaboration between teams
 
 Continuous integration and continuous deployment (CI/CD)
 
@@ -352,19 +352,19 @@ A Region is a geographic area (e.g., US-East, Asia-Pacific, Europe)
 
 Each region contains multiple data centers
 
-Examples: us-east-1 (N. Virginia), ap-south-1 (Mumbai)
+Examples: Think of a Region as a city (e.g., ap-south-1 (Mumbai)).
 
 🟢 Currently: 33 AWS Regions (and still growing)
 
 ✅ Availability Zone (AZ)
 -------------------------------------------------------------------------
-Each region has multiple Availability Zones
+An Availability Zone is an isolated data center within a Region.
 
 An AZ is basically a separate data center with its own power, networking, and cooling
 
-AZs in the same region are connected with high-speed networks
-
 Designed for high availability & fault tolerance
+
+Examples : Think of AZs as different buildings or campuses in that city.
 
 🟢 Currently: 105 Availability Zones
 ------------------------------------------------------------------------------
