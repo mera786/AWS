@@ -1,1 +1,730 @@
+                                                          BEFORE JUMPING TO AWS 
+#####################################################################################################################################################################
+
+(1) DevOps Basics
+--------------------
+
+Q1. What is DevOps?
+👉 DevOps is a culture and set of practices that combine Development (Dev) and Operations (Ops) to deliver software faster, more reliably, and continuously.
+
+Q2. Why do we need DevOps?
+👉 To bridge the gap between developers and operations, automate processes, and release software quickly with fewer bugs.
+
+Q3. How is DevOps different from traditional software development?
+👉 Traditional: Separate Dev & Ops teams → slow releases.
+👉 DevOps: Collaboration + automation → faster, reliable releases.
+
+Q4. Name some tools used in DevOps.
+👉 Git, Jenkins, Docker, Kubernetes, Terraform, Ansible, Prometheus, ELK Stack.
+
+
+(2) Goals of DevOps
+----------------------
+
+Q1. What are the main goals of DevOps?
+👉 Faster delivery, automation, better collaboration, CI/CD, high quality software, and quick recovery from failures.
+
+Q2. How does DevOps improve collaboration?
+👉 By breaking silos: Dev, QA, and Ops work together with shared tools and responsibilities.
+
+Q3. How does DevOps ensure faster recovery from failures?
+👉 With CI/CD, automated rollback, monitoring, and backups.
+
+
+(3) Key DevOps Practices
+--------------------------
+
+Q1. What is CI/CD?
+👉 Continuous Integration and Continuous Deployment – automates code integration, testing, and deployment.
+
+Q2. What is Infrastructure as Code (IaC)?
+👉 Managing infrastructure (servers, networks, etc.) using code (e.g., Terraform, Ansible).
+
+Q3. What is Automated Testing in DevOps?
+👉 Running tests automatically to detect bugs early.
+
+Q4. Why is monitoring and logging important in DevOps?
+👉 To track performance, detect issues quickly, and troubleshoot failures.
+
+Q5. What is containerization?
+👉 Packaging apps in containers (e.g., Docker, Kubernetes) so they run anywhere.
+
+Q6. What is the difference between Continuous Integration, Continuous Delivery, and Continuous Deployment?
+👉 CI: Merge code frequently + test automatically.
+👉 CD (Delivery): Automated release pipeline but manual approval before deploy.
+👉 CD (Deployment): Fully automated deployment without manual approval.
+
+Q7. What is the role of Terraform in DevOps?
+👉 IaC tool to provision infrastructure (servers, networks, databases) in a repeatable way.
+
+Q8. How is Kubernetes different from Docker?
+👉 Docker = containerization.
+👉 Kubernetes = orchestration of multiple containers.
+
+Q9. Why do we need monitoring in DevOps? Give examples of tools.
+👉 To detect performance issues & failures quickly. Tools: Prometheus, Grafana, ELK, CloudWatch.
+
+
+(4) IT Infrastructure Basics :
+-------------------------------
+
+Q1. What is IT Infrastructure?
+👉 The basic physical and virtual resources (servers, storage, network, security, etc.) required to run IT services and software.
+
+Q2. Difference between physical and virtual infrastructure?
+👉 Physical: Actual servers/hardware.
+👉 Virtual: Created using virtualization/cloud (VMs, containers).
+
+Q3. Why is IT infrastructure considered the backbone of IT services?
+👉 Because without servers, network, storage, and security, no application can run or be delivered.
+
+
+(5) Components of IT Infrastructure :
+--------------------------------------
+
+Q1. What are the key components of IT infrastructure?
+👉 Servers, network, power supply, storage, backup, and security systems.
+
+Q2. Why is backup important in IT infrastructure?
+👉 To protect data from failures, cyberattacks, or accidental loss.
+
+Q3. What is the difference between storage and backup?
+👉 Storage = where live data resides.
+👉 Backup = copies of data for recovery in case of failure/loss.
+
+Q4. How is security handled in IT infrastructure?
+👉 Using firewalls, antivirus, encryption, access control, and monitoring.
+
+
+
+(6) On-Premises Infrastructure :
+---------------------------------
+
+Q1. What is On-Prem Infrastructure?
+👉 All IT resources (servers, storage, network) are owned and managed at your office/data center.
+
+Q2. Who is responsible for maintenance in On-Prem?
+👉 The organization itself (buying hardware, hiring IT staff, managing security).
+
+Q3. When would a company prefer On-Prem over Cloud?
+👉 When strict security/compliance is needed, or legacy applications can’t run on cloud.
+
+Q4. What skills do IT staff need for managing On-Prem infrastructure?
+👉 Server administration, networking, backup, troubleshooting, hardware maintenance.
+
+
+(7) Challenges of On-Prem  :
+-----------------------------
+
+Q1. What are the main challenges of On-Prem infrastructure?
+👉 High cost, need more manpower, scalability is hard, downtime risk, network issues, and security responsibility.
+
+Q2. Why is scalability a challenge in On-Prem?
+👉 Because adding resources (servers, storage) requires buying new hardware → takes time & money.
+
+Q3. How does downtime affect business in On-Prem?
+👉 Leads to loss of revenue, poor customer experience, and reduced productivity.
+
+
+
+(8) Cloud Computing :
+------------------------
+
+Q1. What is Cloud Computing?
+👉 Delivery of IT resources (servers, storage, databases, software) over the internet on a pay-as-you-go basis.
+
+Q2. What are the benefits of cloud computing?
+👉 Low cost, pay as you go, scalability, high availability, built-in security, and automated backup & recovery.
+
+Q3. Name some popular cloud providers.
+👉 AWS, Azure, GCP, Salesforce, Alibaba Cloud, DigitalOcean.
+
+Q4. What are the service models of cloud computing?
+👉 IaaS (Infrastructure as a Service), PaaS (Platform as a Service), SaaS (Software as a Service).
+
+Q5. Explain IaaS, PaaS, SaaS with examples.?
+👉 IaaS: AWS EC2, Azure VM (infrastructure only).
+👉 PaaS: Google App Engine, AWS Elastic Beanstalk (deploy apps without managing infra).
+👉 SaaS: Gmail, Salesforce, Office 365 (ready-to-use software).
+
+Q6. What are deployment models of cloud?
+👉 Public Cloud, Private Cloud, Hybrid Cloud, Multi-Cloud.
+
+Q7. How does “pay-as-you-go” reduce IT cost?
+👉 You pay only for used resources (compute, storage, network) → no upfront investment.
+
+
+(9) On-Prem vs Cloud :
+----------------------
+
+Q1. What is the main difference between On-Prem and Cloud?
+👉 On-Prem = you own & maintain hardware, Cloud = provider maintains it.
+
+Q2. Which one is more scalable: On-Prem or Cloud?
+👉 Cloud.
+
+Q3. Which one requires more staff: On-Prem or Cloud?
+👉 On-Prem.
+
+Q4. Why is cloud more reliable than On-Prem?
+👉 Cloud providers offer redundancy, failover, backups, and SLA-based uptime.
+
+Q5. Can a company use both On-Prem and Cloud? What is it called?
+👉 Yes, it’s called Hybrid Cloud.
+
+
+
+(10) Cloud Service Models :
+----------------------------
+
+Q1. What are the three main cloud service models?
+👉 IaaS, PaaS, SaaS.
+
+Q2. What is the difference between IaaS, PaaS, and SaaS in one line?
+👉 IaaS = infrastructure, PaaS = platform, SaaS = ready-to-use software.
+
+Q3. Who is responsible for managing infrastructure in SaaS?
+👉 The cloud provider.
+
+
+(11) IaaS (Infrastructure as a Service) :
+------------------------------------------
+
+Q1. What is IaaS?
+👉 Cloud provider gives raw infrastructure (VMs, storage, networking) and you build everything on top of it.
+
+Q2. Give an example scenario of using IaaS.
+👉 Hosting a Java web app on AWS EC2 → install OS, runtime, Tomcat, MySQL, and deploy the app.
+
+Q3. What responsibilities does the customer have in IaaS?
+👉 Install OS, runtimes, web servers, deploy apps, manage patches & security.
+
+Q4. Name some common IaaS providers.
+👉 AWS EC2, Azure Virtual Machines, Google Compute Engine, Oracle Cloud, DigitalOcean Droplets.
+
+Q5. What is the advantage of IaaS?
+👉 High flexibility & control because you configure everything yourself.
+
+
+
+(12) PaaS (Platform as a Service) :
+------------------------------------
+
+Q1. What is PaaS?
+👉 Cloud provider gives a ready-made platform (OS, runtime, web server), you just deploy your app.
+
+Q2. What is the main difference between IaaS and PaaS?
+👉 In IaaS you manage OS + runtime + app, in PaaS you only manage the app.
+
+Q3. Give an example scenario of using PaaS.
+👉 Deploy a Spring Boot app on Heroku or Google App Engine → push code, provider manages environment & scaling.
+
+Q4. What responsibilities does the customer have in PaaS?
+👉 Only write & deploy code, manage data.
+
+Q5. Name some PaaS providers.
+👉 Heroku, Google App Engine, AWS Elastic Beanstalk, Azure App Service.
+
+Q6. What is the benefit of PaaS?
+👉 Faster development and deployment since you don’t manage infrastructure.
+
+
+
+(13) SaaS (Software as a Service) :
+--------------------------------------
+
+Q1. What is SaaS?
+👉 Ready-to-use software delivered over the internet, no installation or setup required.
+
+Q2. What is the customer’s responsibility in SaaS?
+👉 Just log in and use the software.
+
+Q3. Give examples of SaaS applications.
+👉 Zoom, Google Docs, Dropbox, Microsoft 365, Jira, Salesforce.
+
+Q4. What is the biggest advantage of SaaS?
+👉 Zero maintenance → provider handles updates, backups, security.
+
+Q5. How do IaaS, PaaS, and SaaS differ in terms of control?
+👉 IaaS = max control, SaaS = least control, PaaS = in between.
+
+Q6. Which model is best for developers who want to only focus on coding?
+👉 PaaS.
+
+Q7. Which model would you choose for running Gmail or Salesforce?
+👉 SaaS.
+
+Q8. Which model would you choose for hosting your own customized ERP system?
+👉 IaaS (because you need full control).
+
+Q9. Which cloud model supports “lift and shift” migration from on-prem to cloud?
+👉 IaaS (easy to move VMs and apps as-is).
+
+Q10. Why is SaaS considered cost-effective for small businesses?
+👉 No upfront infra cost, subscription-based pricing.
+
+
+                                                          BEFORE JUMPING TO AWS 
+#####################################################################################################################################################################
+
+(1) ✅ AWS Cloud :
+---------------------
+
+Q1. What is AWS?
+A. AWS (Amazon Web Services) is the most popular cloud provider offering 200+ services.
+
+Q2. When was AWS launched?
+A. In 2006.
+
+Q3. How many countries use AWS?
+A. More than 190+ countries.
+
+Q4. What pricing model does AWS use?
+A. Pay-as-you-go (only pay for what you use).
+
+Q5. Why is AWS the market leader in cloud?
+A. Because of its global infra, large service catalog, security, scalability, and continuous innovation.
+
+Q6. Difference between Free Tier and Pay-as-you-go?
+A. Free Tier → Limited usage free for 12 months.
+Pay-as-you-go → Pay only for consumed resources.
+
+Q7. Why companies prefer AWS over on-prem?
+A. Scalability, lower upfront cost, faster deployment, high availability.
+
+
+(2) ✅ Region & Availability Zone :
+-----------------------------------------
+
+Q1. What is a Region in AWS?
+A. A geographical area like Mumbai (ap-south-1) or Virginia (us-east-1).
+
+Q2. What is an Availability Zone (AZ)?
+A. An isolated data center within a Region with separate power and networking.
+
+Q3. How many Regions and AZs does AWS have?
+A. 33 Regions and 105 AZs (growing).
+
+Q4. Why are AZs important?
+A. They provide high availability and fault tolerance.
+
+Q5. What if you deploy in a single AZ?
+A. App faces downtime if that AZ fails.
+
+Q6. Can resources be accessed across Regions?
+A. Yes, but with higher latency and extra cost.
+
+
+(3) 🌍 Why Global Setup Matters :
+------------------------------------
+
+Q1. Why does AWS have Regions worldwide?
+A. To reduce latency and serve users closer to their location.
+
+Q2. What’s the benefit of multiple Regions?
+A. Compliance, redundancy, and disaster recovery.
+
+Q3. Example where Region choice is critical?
+A. Banking apps must keep data in-country due to compliance laws.
+
+Q4. Example: who secures S3 storage infra?
+A. AWS manages infra, but customer sets permissions (IAM policies).
+
+
+
+(4) 🖥️ AWS  Services :
+----------------------------------
+
+Q1. Can you name some of the core AWS services you have worked with or know about?
+
+AWS offers 200+ services, here are some of the most popular and important ones, grouped by purpose:
+
+🖥️ 1. Compute Services
+**************************
+Service							Description
+EC2 (Elastic Compute Cloud)			Create virtual machines (hourly billing)
+Elastic Beanstalk				PaaS for managing full web applications (auto-scaling, deployment, etc.)
+Lambda	Serverless computing — 			just upload code, no servers needed
+ECS (Elastic Container Service)			Run and manage Docker containers
+EKS (Elastic Kubernetes Service)		Run Kubernetes clusters on AWS
+
+📦 2. Storage Services
+**************************
+Service							Description
+S3 (Simple Storage Service)			Object storage for unlimited files (like Google Drive but for apps)
+EFS (Elastic File System)			Shared file system — mountable to multiple EC2s like a network drive
+
+🗄️ 3. Database Services
+**************************
+Service							Description
+RDS (Relational Database Service)		Managed SQL databases (MySQL, PostgreSQL, etc.)
+DynamoDB					NoSQL managed database (not in your original list, but widely used)
+
+🔒 4. Security & Access
+**************************
+Service							Description
+IAM (Identity & Access Management)		Manage users, roles, and permissions for AWS resources
+
+🌐 5. Networking
+**************************
+Service							Description
+VPC (Virtual Private Cloud)			Create a private network within AWS
+Route 53					Domain Name System (DNS) service for domain mapping
+🔔 6. Monitoring & Notifications
+Service							Description
+CloudWatch					Monitor resources, log events, set alarms
+SNS (Simple Notification Service)		Send email, SMS, push notifications automatically
+
+
+NOTE : 
+Short way to say it :=  AWS (cloud provider) → EC2 (AWS Service) → EBS (Component of EC2) → Volumes, Snapshots, Lifecycle Manager (Sub-components of EBS)
+
+
+(4.1) ✅ AWS EC2 (Elastic Compute Cloud) :
+---------------------------------------------
+Definition:
+Amazon EC2 is a web service that provides secure, resizable compute capacity (virtual servers) in the cloud. 
+It allows you to run applications on virtual machines called instances.
+
+** INSTANCES **
+
+Q1. What is Amazon EC2?
+👉 EC2 is Amazon’s service to create and run virtual servers (instances) in the cloud.
+
+Q2. What is an EC2 instance?
+👉 An EC2 instance is a virtual machine running on Amazon’s cloud infrastructure.
+
+Q3. What is the benefit of EC2?
+👉 Scalability, pay-as-you-go pricing, flexibility of choosing OS, storage, and instance type.
+
+Q4. How do you access an EC2 instance?
+👉 Using SSH (for Linux) or RDP (for Windows) along with a key pair.
+
+Q5. What are EC2 instance types?
+👉 General purpose, Compute optimized, Memory optimized, Storage optimized, Accelerated computing.
+
+Q6. How does EC2 pricing work?
+👉 Pricing models: On-Demand, Reserved Instances, Spot Instances, and Savings Plans.
+
+Q7. What happens when an EC2 instance is stopped vs terminated?
+👉 Stopped → Data in EBS is retained. Terminated → Data in instance store is lost.
+
+Q8. Difference between vertical scaling and horizontal scaling in EC2?
+👉 Vertical: Increase instance size (more CPU/RAM).
+👉 Horizontal: Add more instances behind a load balancer.
+
+Q9. How does Elastic IP work in EC2?
+👉 It’s a static public IPv4 that you can remap to any instance.
+
+Q10. What security features does EC2 provide?
+👉 Security Groups, NACLs, Key Pairs, IAM Roles.
+
+
+                   ** Amazon Machine Images **
+
+Definition:
+An AMI is a template that contains the software configuration (OS, application server, applications) required to launch an EC2 instance.
+
+Q1. What is an AMI?
+👉 A pre-configured image to create EC2 instances.
+
+Q2. What are the types of AMIs?
+👉 Public AMIs, Private AMIs, AWS Marketplace AMIs.
+
+Q3. What does an AMI contain?
+👉 OS, Application Server, Applications, and launch permissions.
+
+Q4. How do you create a custom AMI?
+👉 Stop the instance → Create Image → Use the AMI for new instances.
+
+Q5. Difference between AMI and Snapshot?
+👉 AMI = Full system image (OS + Apps + Data).
+👉 Snapshot = Backup of EBS volume.
+
+
+                   ** Elastic Block Store **
+
+Definition:
+Amazon EBS provides block-level storage volumes for EC2 instances. Volumes behave like raw, unformatted hard drives that can be attached to instances.
+
+(a) Volumes
+------------
+Persistent block storage attached to EC2.
+
+Q1. What is an EBS Volume?
+👉 A virtual hard drive for EC2 instances.
+
+Q2. What are EBS volume types?
+👉 General Purpose SSD (gp3/gp2), Provisioned IOPS SSD (io1/io2), Throughput Optimized HDD (st1), Cold HDD (sc1).
+
+Q3. Can EBS volumes be attached to multiple instances?
+👉 Normally no, but with EBS Multi-Attach (for io1/io2 volumes) it’s possible.
+
+(b) Snapshots
+------------------
+Point-in-time backups of EBS volumes.
+
+Q4. What is an EBS Snapshot?
+👉 Incremental backup of an EBS volume stored in S3.
+
+Q5. Difference between Snapshot and AMI?
+👉 Snapshot is volume backup. AMI is full machine image.
+
+(c) Lifecycle Manager
+------------------------
+Automates the creation, retention, and deletion of snapshots.
+
+Q6. What is EBS Lifecycle Manager?
+👉 It automates EBS snapshot management.
+
+Q7. Why do we use Lifecycle Manager?
+👉 To schedule daily/weekly backups and retain them as per policy.
+
+Q8. What is the difference between EBS and Instance Store?
+👉 EBS is persistent storage, Instance Store is temporary storage tied to instance lifecycle.
+
+Q9. What is the durability of EBS?
+👉 99.999% availability within an AZ.
+
+
+                   ** Security Groups **
+
+Definition:
+Security Group is a virtual firewall that controls inbound and outbound traffic for EC2 instances.
+
+Q1. What is a Security Group in AWS?
+👉 A firewall that allows or denies traffic to EC2 instances.
+
+Q2. What type of rules does a Security Group support?
+👉 Inbound (incoming traffic) and Outbound (outgoing traffic).
+
+Q3. Are Security Groups stateful or stateless?
+👉 Stateful → if inbound traffic is allowed, the response is automatically allowed.
+
+Q4. Difference between Security Groups and NACLs?
+👉 Security Groups = Instance level, Stateful.
+👉 NACLs = Subnet level, Stateless.
+
+Q5. How many Security Groups can be attached to one EC2 instance?
+👉 By default, 5 per instance (limit can be increased).
+
+Q6. What happens if no rule is added in a Security Group?
+👉 All inbound traffic is denied, but all outbound is allowed.
+
+
+                   ** Key Pairs **
+Definition:
+Key Pairs are a set of public and private keys used to securely connect to an EC2 instance (SSH for Linux, RDP for Windows).
+
+Q1. What is a Key Pair in EC2?
+👉 A public-private key mechanism to authenticate access to an instance.
+
+Q2. Which file format is used for Key Pairs?
+👉 .pem (Linux SSH) and .ppk (Windows PuTTY).
+
+Q3. What happens if you lose your Key Pair?
+👉 You can’t connect directly. You must create a new key, stop the instance, detach the root volume, attach it to another instance, add the new key to authorized_keys, and then reattach.
+
+Q4. Can we share Key Pairs across regions?
+👉 No, Key Pairs are region-specific.
+
+
+                   ** Elastic IPs **
+Definition:
+Elastic IP is a static IPv4 address that you can assign to any instance in a region.
+
+Q1. What is an Elastic IP?
+👉 A static, public IPv4 address that remains fixed even if the instance stops/restarts.
+
+Q2. How is Elastic IP different from normal Public IP?
+👉 Public IP changes when an instance is stopped and started, while Elastic IP stays the same.
+
+Q3. How many Elastic IPs can an AWS account have?
+👉 By default, 5 per region (can request increase).
+
+Q4. Is Elastic IP free?
+👉 Free only if it’s associated with a running instance. If not used, AWS charges for it.
+
+
+                   ** Elastic Load Balancing **
+Definition:
+Elastic Load Balancer automatically distributes incoming traffic across multiple EC2 instances.
+Sub-components of ELB like,
+- Application Load Balancer (ALB) – Layer 7 (HTTP/HTTPS)
+- Network Load Balancer (NLB) – Layer 4 (TCP/UDP)
+- Gateway Load Balancer (GWLB) – For security appliances
+
+Q1. What is Elastic Load Balancing?
+👉 A service to automatically balance traffic between multiple instances.
+
+Q2. What are the types of Load Balancers in AWS?
+👉 ALB, NLB, GWLB.
+
+Q3. What is a Target Group in Load Balancing?
+👉 A group of EC2 instances or services that receive traffic from the load balancer.
+
+Q4. Difference between ALB and NLB?
+👉 ALB works at HTTP/HTTPS level (Layer 7), NLB works at TCP/UDP (Layer 4).
+
+Q5. What health check mechanism does ELB use?
+👉 Periodically checks if targets (instances) are healthy before sending traffic.
+
+Q6. Can we attach an ELB to instances in different Availability Zones?
+👉 Yes, ELB supports multi-AZ deployments.
+
+
+                   ** Elastic Load Balancing **
+Definition:
+Auto Scaling automatically increases or decreases the number of EC2 instances based on demand.
+
+Q1. What is Auto Scaling in AWS?
+👉 A feature that automatically adjusts the number of EC2 instances based on traffic demand.
+
+Q2. What are the components of Auto Scaling?
+👉 Launch Configuration/Launch Template, Auto Scaling Group, Scaling Policies.
+
+Q3. Why do we use Auto Scaling?
+👉 To handle sudden traffic spikes and reduce costs when traffic is low.
+
+Q4. Difference between Dynamic Scaling and Scheduled Scaling?
+👉 Dynamic = Based on real-time demand (e.g., CPU > 80%).
+👉 Scheduled = Based on fixed schedule (e.g., every day at 9 AM).
+
+Q5. What is a Cooldown period in Auto Scaling?
+👉 A waiting period to prevent multiple scaling actions in quick succession.
+
+Q6. Can Auto Scaling work with Load Balancers?
+👉 Yes, Auto Scaling integrates with ELB to distribute traffic automatically.
+
+
+
+
+
+
+(4) 🗄️ AWS Storage Types : 
+--------------------------------
+
+Q1. What storage options does AWS provide?
+A. Object Storage (images, videos, backups), Block Storage used for DBs, OS, transactional apps), File Storage (Shared file systems, enterprise apps).
+
+Q2. Example of Object Storage?
+A. Amazon S3.
+
+Q3. Example of Block Storage?
+A. Amazon EBS.
+
+Q4. Example of File Storage?
+A. Amazon EFS.
+
+Q5. Difference between S3 and EBS?
+A. S3 = object storage (unlimited, global).
+EBS = block storage for EC2 (attached like a disk).
+
+Q6. When use EFS?
+A. For multiple EC2s needing shared file system.
+
+Q7. Which storage is best for backups?
+A. S3 (cheap, scalable, durable).
+
+
+
+
+
+
+(6) 🌐 AWS Networking :
+----------------------------
+
+Q1. What is VPC?
+A. Virtual Private Cloud → isolated private network in AWS.
+
+Q2. What is an Internet Gateway?
+A. Connects VPC to the internet.
+
+Q3. What is Route 53?
+A. AWS DNS service.
+
+Q4. Why use VPC?
+A. To secure apps with private networking.
+
+Q5. Difference between Public and Private Subnet?
+A. Public → has internet access, Private → no internet access.
+
+Q6. Why use Route 53?
+A. For domain registration, DNS routing, and health checks.
+
+
+(7) 🔐 AWS Security :
+---------------------------
+
+Q1. What is IAM?
+A. Identity and Access Management service in AWS.
+
+Q2. What is MFA?
+A. Multi-Factor Authentication (extra layer of login security).
+
+Q3. Example of IAM entity?
+A. Users, Groups, Roles.
+
+Q4. Best practices for IAM?
+A. Least privilege access, enable MFA, rotate keys.
+
+Q5. Difference between IAM Role and IAM User?
+A. User = human identity.
+Role = temporary access for services/apps.
+
+Q6. Why use Security Groups?
+A. To control inbound/outbound traffic to EC2.
+
+
+(8) 📊 AWS Monitoring :
+---------------------------
+
+Q1. What is CloudWatch?
+A. AWS monitoring service for logs, metrics, alerts.
+
+Q2. What is CloudTrail?
+A. Tracks API calls and activities in AWS.
+
+Q3. Why is monitoring needed?
+A. To detect issues early and maintain performance.
+
+Q4. Difference between CloudWatch and CloudTrail?
+A. CloudWatch → performance monitoring.
+CloudTrail → auditing and security tracking.
+
+Q5. How do alarms in CloudWatch help?
+A. Alert when thresholds are crossed (e.g., CPU > 80%).
+
+Q6. Why is monitoring critical in production?
+A. Ensures uptime, helps in troubleshooting and scaling.
+
+
+(9) 🛠️ AWS Database Services :
+---------------------------------
+
+Q1. What is RDS?
+A. Relational Database Service → managed DB (MySQL, PostgreSQL, etc.).
+
+Q2. What is DynamoDB?
+A. NoSQL database.
+
+Q3. What is Aurora?
+A. High-performance MySQL/PostgreSQL compatible DB.
+
+Q4. RDS vs DynamoDB difference?
+A. RDS → relational (SQL), DynamoDB → NoSQL (key-value).
+
+Q5. Why use Aurora over MySQL?
+A. 5x faster, highly scalable, fully managed.
+
+Q6. When to choose DynamoDB?
+A. For high-speed apps with unstructured data.
+
+
+
+
+
+
+
+
 
