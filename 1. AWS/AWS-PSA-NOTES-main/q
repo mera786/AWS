@@ -1,1 +1,270 @@
+                                                          BEFORE JUMPING TO AWS 
+#####################################################################################################################################################################
+
+(1) DevOps Basics :
+                 Q1. What is DevOps?
+                 Q2. Why do we need DevOps?
+                 Q3. How is DevOps different from traditional software development?
+                 Q4. Name some tools used in DevOps.
+(2) Goals of DevOps :
+                 Q1. What are the main goals of DevOps?
+                 Q2. How does DevOps improve collaboration?
+                 Q3. How does DevOps ensure faster recovery from failure.
+(3) Key DevOps Practices :
+                 Q1. What is CI/CD?
+                 Q2. What is Infrastructure as Code (IaC)?
+                 Q3. What is Automated Testing in DevOps?
+                 Q4. Why is monitoring and logging important in DevOps?
+                 Q5. What is containerization?
+                 Q6. What is the difference between Continuous Integration, Continuous Delivery, and Continuous Deployment?
+                 Q7. What is the role of Terraform in DevOps?
+                 Q8. How is Kubernetes different from Docker?
+                 Q9. Why do we need monitoring in DevOps? Give examples of tools.
+(4) IT Infrastructure Basics :
+                 Q1. What is IT Infrastructure?
+                 Q2. Difference between physical and virtual infrastructure?
+                 Q3. Why is IT infrastructure considered the backbone of IT services?
+(5) Components of IT Infrastructure :
+                 Q1. What are the key components of IT infrastructure?
+                 Q2. Why is backup important in IT infrastructure?
+                 Q3. What is the difference between storage and backup?
+                 Q4. How is security handled in IT infrastructure?
+(6) On-Premises Infrastructure :
+                 Q1. What is On-Prem Infrastructure?
+                 Q2. Who is responsible for maintenance in On-Prem?
+                 Q3. When would a company prefer On-Prem over Cloud?
+                 Q4. What skills do IT staff need for managing On-Prem infrastructure?
+(7) Challenges of On-Prem  :
+                 Q1. What are the main challenges of On-Prem infrastructure?
+                 Q2. Why is scalability a challenge in On-Prem?
+                 Q3. How does downtime affect business in On-Prem?
+(8) Cloud Computing :
+                 Q1. What is Cloud Computing?
+                 Q2. What are the benefits of cloud computing?
+                 Q3. Name some popular cloud providers.
+                 Q4. What are the service models of cloud computing?
+                 Q5. Explain IaaS, PaaS, SaaS with examples.?
+                 Q6. What are deployment models of cloud?
+                 Q7. How does “pay-as-you-go” reduce IT cost?
+(9) On-Prem vs Cloud :
+                 Q1. What is the main difference between On-Prem and Cloud?
+                 Q2. Which one is more scalable: On-Prem or Cloud?
+                 Q3. Which one requires more staff: On-Prem or Cloud?
+                 Q4. Why is cloud more reliable than On-Prem?
+                 Q5. Can a company use both On-Prem and Cloud? What is it called?
+(10) Cloud Service Models :
+                 Q1. What are the three main cloud service models?
+                 Q2. What is the difference between IaaS, PaaS, and SaaS in one line?
+                 Q3. Who is responsible for managing infrastructure in SaaS?
+(11) IaaS (Infrastructure as a Service) :
+                 Q1. What is IaaS?
+                 Q2. Give an example scenario of using IaaS.?
+                 Q3. What responsibilities does the customer have in IaaS?
+                 Q4. Name some common IaaS providers.?
+                 Q5. What is the advantage of IaaS?
+(12) PaaS (Platform as a Service) :
+                 Q1. What is PaaS?
+                 Q2. What is the main difference between IaaS and PaaS?
+                 Q3. Give an example scenario of using PaaS.
+                 Q4. What responsibilities does the customer have in PaaS?
+                 Q5. Name some PaaS providers.
+                 Q6. What is the benefit of PaaS?
+(13) SaaS (Software as a Service) :
+                 Q1. What is SaaS?
+                 Q2. What is the customer’s responsibility in SaaS?
+                 Q3. Give examples of SaaS applications.
+                 Q4. What is the biggest advantage of SaaS?
+                 Q5. How do IaaS, PaaS, and SaaS differ in terms of control?
+                 Q6. Which model is best for developers who want to only focus on coding?
+                 Q7. Which model would you choose for running Gmail or Salesforce?
+                 Q8. Which model would you choose for hosting your own customized ERP system?
+                 Q9. Which cloud model supports “lift and shift” migration from on-prem to cloud?
+                 Q10. Why is SaaS considered cost-effective for small businesses?
+
+                                                           JUMPING TO AWS 
+#####################################################################################################################################################################
+
+
+(1) ✅ AWS Cloud :
+                 Q1. What is AWS?
+                 Q2. When was AWS launched?
+                 Q3. How many countries use AWS?
+                 Q4. What pricing model does AWS use?
+                 Q5. Why is AWS the market leader in cloud?
+                 Q6. Difference between Free Tier and Pay-as-you-go?
+                 Q7. Why companies prefer AWS over on-prem?
+(2) ✅ Region & Availability Zone : 
+                 Q1. What is a Region in AWS?
+                 Q2. What is an Availability Zone (AZ)?
+                 Q3. How many Regions and AZs does AWS have?
+                 Q4. Why are AZs important?
+                 Q5. What if you deploy in a single AZ?
+                 Q6. Can resources be accessed across Regions?
+(3) 🌍 Why Global Setup Matters :
+                 Q1. Why does AWS have Regions worldwide?
+                 Q2. What’s the benefit of multiple Regions?
+                 Q3. Example where Region choice is critical?
+                 Q4. Example: who secures S3 storage infra?
+(4) 🖥️ AWS Services :
+                 Q1. Can you name some of the core AWS services you have worked with or know about?
+(4.1) ✅ AWS EC2 (Elastic Compute Cloud) :
+                   ** INSTANCES **
+                 Q1. What is Amazon EC2?
+                 Q2. What is an EC2 instance?
+                 Q3. What is the benefit of EC2?
+                 Q4. How do you access an EC2 instance?
+                 Q5. What are EC2 instance types?
+                 Q6. How does EC2 pricing work?
+                 Q7. What happens when an EC2 instance is stopped vs terminated?
+                 Q8. Difference between vertical scaling and horizontal scaling in EC2?
+                 Q9. How does Elastic IP work in EC2?
+                 Q10. What security features does EC2 provide?
+                   ** Amazon Machine Images **
+                 Q1. What is an AMI?
+                 Q2. What are the types of AMIs?
+                 Q3. What does an AMI contain?
+                 Q4. How do you create a custom AMI?
+                 Q5. Difference between AMI and Snapshot?
+                   ** Elastic Block Store **
+                 Q1. What is an EBS Volume?
+                 Q2. What are EBS volume types?
+                 Q3. Can EBS volumes be attached to multiple instances?
+                 Q4. What is an EBS Snapshot?
+                 Q5. Difference between Snapshot and AMI?
+                 Q6. What is EBS Lifecycle Manager?
+                 Q7. Why do we use Lifecycle Manager?
+                 Q8. What is the difference between EBS and Instance Store?
+                 Q9. What is the durability of EBS?
+                   ** Security Groups **
+                 Q1. What is a Security Group in AWS?
+                 Q2. What type of rules does a Security Group support?
+                 Q3. Are Security Groups stateful or stateless?
+                 Q4. Difference between Security Groups and NACLs?
+                 Q5. How many Security Groups can be attached to one EC2 instance?
+                 Q6. What happens if no rule is added in a Security Group?
+                   ** Key Pairs **
+                 Q1. What is a Key Pair in EC2?
+                 Q2. Which file format is used for Key Pairs?
+                 Q3. What happens if you lose your Key Pair?
+                 Q4. Can we share Key Pairs across regions?
+                   ** Elastic IPs **
+                 Q1. What is an Elastic IP?
+                 Q2. How is Elastic IP different from normal Public IP?
+                 Q3. How many Elastic IPs can an AWS account have?
+                 Q4. Is Elastic IP free?
+                   ** Elastic Load Balancing **
+                 Q1. What is Elastic Load Balancing?
+                 Q2. What are the types of Load Balancers in AWS?
+                 Q3. What is a Target Group in Load Balancing?
+                 Q4. Difference between ALB and NLB?
+                 Q5. What health check mechanism does ELB use?
+                 Q6. Can we attach an ELB to instances in different Availability Zones?
+                   ** Elastic Load Balancing **
+                 Q1. What is Auto Scaling in AWS?
+                 Q2. What are the components of Auto Scaling?
+                 Q3. Why do we use Auto Scaling?
+                 Q4. Difference between Dynamic Scaling and Scheduled Scaling?
+                 Q5. What is a Cooldown period in Auto Scaling?
+                 Q6. Can Auto Scaling work with Load Balancers?
+(4) IT Infrastructure Basics :
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+(4) IT Infrastructure Basics :
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+(4) IT Infrastructure Basics :
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+(4) IT Infrastructure Basics :
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+(4) IT Infrastructure Basics :
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+
+
+
+
+
+
+
+
+(4) 🗄️ AWS Storage Types :
+                 Q1. What storage options does AWS provide?
+                 Q2. Example of Object Storage?
+                 Q3. Example of Block Storage?
+                 Q4. Example of File Storage?
+                 Q5. Difference between S3 and EBS?
+                 Q6. When use EFS?
+                 Q7. Which storage is best for backups?
+
+(6) 🌐 AWS Networking :
+                 Q1. What is VPC?
+                 Q2. What is an Internet Gateway?
+                 Q3. What is Route 53?
+                 Q4. Why use VPC?
+                 Q5. Difference between Public and Private Subnet?
+                 Q6. Why use Route 53?
+(7) 🔐 AWS Security :
+                 Q1. What is IAM?
+                 Q2. What is MFA?
+                 Q3. Example of IAM entity?
+                 Q4. Best practices for IAM?
+                 Q5. Difference between IAM Role and IAM User?
+                 Q6. Why use Security Groups?
+(8) 📊 AWS Monitoring : 
+                 Q1. What is CloudWatch?
+                 Q2. What is CloudTrail?
+                 Q3. Why is monitoring needed?
+                 Q4. Difference between CloudWatch and CloudTrail?
+                 Q5. How do alarms in CloudWatch help?
+                 Q6. Why is monitoring critical in production?
+(9) 🛠️ AWS Database Services :
+                 Q1. What is RDS?
+                 Q2. What is DynamoDB?
+                 Q3. What is Aurora?
+                 Q4. RDS vs DynamoDB difference?
+                 Q5. Why use Aurora over MySQL?
+                 Q6. When to choose DynamoDB?
+(4) IT Infrastructure Basics :
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+(4) IT Infrastructure Basics :
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+(4) IT Infrastructure Basics :
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+(4) IT Infrastructure Basics :
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+(4) IT Infrastructure Basics :
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+(4) IT Infrastructure Basics :
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+                 Q1. a?
+
 
