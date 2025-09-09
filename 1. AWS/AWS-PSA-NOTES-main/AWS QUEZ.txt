@@ -9,7 +9,7 @@
 (9) tell top cloud providers companies?
 (10) difference between On-Prem Infrastructure & Cloud Computing?
 
-(11) How many types of cloud service models are there?
+(11) How many types of cloud service models are there? 
 (12) explain IaaS (Infrastructure as a Service)?
       (a) ✅ What the cloud provider gives you?
       (b) What you (the customer) have to do?
