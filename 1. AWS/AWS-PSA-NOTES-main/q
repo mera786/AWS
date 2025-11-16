@@ -159,14 +159,14 @@
                  Q4. Difference between ALB and NLB?
                  Q5. What health check mechanism does ELB use?
                  Q6. Can we attach an ELB to instances in different Availability Zones?
-                   ** Elastic Load Balancing **
+                   ** Auto Scalling **
                  Q1. What is Auto Scaling in AWS?
                  Q2. What are the components of Auto Scaling?
                  Q3. Why do we use Auto Scaling?
                  Q4. Difference between Dynamic Scaling and Scheduled Scaling?
                  Q5. What is a Cooldown period in Auto Scaling?
                  Q6. Can Auto Scaling work with Load Balancers?
-(4) IT Infrastructure Basics :
+(5) IT Infrastructure Basics :
                  Q1. a?
                  Q1. a?
                  Q1. a?
