@@ -34,6 +34,12 @@ Q3. How does DevOps ensure faster recovery from failures?
 (3) Key DevOps Practices
 --------------------------
 
+🔄 CI/CD  	                       
+📦 Infrastructure as Code (IaC)	       
+🧪 Automated Testing	               
+📈 Monitoring & Logging	              
+🐳 Containerization	 
+
 Q1. What is CI/CD?
 👉 Continuous Integration and Continuous Deployment – automates code integration, testing, and deployment.
 
